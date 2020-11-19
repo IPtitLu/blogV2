@@ -26,7 +26,7 @@ class Controller extends AbstractController
         $Produits = $ProduitRepo->limit();
         return $this->render('/index.html.twig', [
             'controller_name' => 'Controller.php',
-            'article' => $Produits
+            'produits' => $Produits
 
 
         ]);
@@ -56,11 +56,13 @@ class Controller extends AbstractController
         return $this->render('/about.html.twig', [
             'controller_name' => 'Controller.php',
             'article' => $Produits,
-            'cards' => $cardContact->getCards()
+            'cards' => $cardContact->getCards(),
+            
 
 
         ]);
     }
+
 
     /**
      * @Route("/login", name="app_login")
