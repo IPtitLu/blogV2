@@ -13,8 +13,8 @@ use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
 
-use App\Service\CardAccueil;
-use App\Service\CardContact;
+use App\Services\CardAccueil;
+use App\Services\CardContact;
 
 class Controller extends AbstractController
 {
