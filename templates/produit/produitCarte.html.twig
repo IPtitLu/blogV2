@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Controller!{% endblock %}
+
+{% block body %}
+
+    </br>
+   
+   <div class="row col d-flex justify-content-center">
+                    <div class="col-md-4" >
+                            <img src="/img/{{ produit.image }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ produit.titre }}</h5>
+                                <p class="card-text">{{ produit.contenu }}</p>
+                                <p class="card-text">{{ produit.prix }} $</p>
+                                <a href="" class="btn btn-primary" >Achat</a>
+                            </div>
+                    </div>
+   </div>
+
+{% endblock %}

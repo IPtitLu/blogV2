@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Controller!{% endblock %}
+
+
+{% block body %}
+
+<main role="main">
+
+      <section class="jumbotron text-center" >
+        <div class="container" style="background-image:url('/img/banniere/banniereSneakers.png')!important; height:550px!important;background-repeat: no-repeat!important; background-size: cover!important; align-items:center!important;">
+          <h1 class="jumbotron-heading">Boutique e-commerce</h1>
+          </br>
+          <p class="lead text-muted">Achat et vente de vêtements, sneakers, etc. Dans l'univers du cinéma, anime, jeux vidéos ..</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Nous contacter</a>
+          </p>
+        </div>
+      </section>
+
+    </br>
+    <section class="text-center">
+            <div class="container">
+                <h1>Nouveautés</h1>
+            </div>
+    </section>
+    </br></br>
+
+      </div>
+
+      <div class="container">
+      
+        <div class="row">
+            {% for produit in produits %}
+                <div class="col-md-4" >
+                    <img src="/img/{{ produit.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                            <h5 class="card-title">{{ produit.titre }}</h5>
+                            <p class="card-text">{{ produit.contenu }}</p>
+                            <p class="card-text" style="">{{ produit.prix }} $</p>
+                            <a href="{{ path('produitCarte', {'id': produit.id}) }}" class="btn btn-dark my-2">Voir</a>
+                    </div>
+                </div>
+            {% endfor %}
+        
+        </div>
+    </div>
+        
+            
+
+</main>
+{% endblock %}
